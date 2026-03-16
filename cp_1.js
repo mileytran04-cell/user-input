@@ -43,3 +43,40 @@ tooltip.classList.add("hidden");
 }
 
 });
+
+form.addEventListener("submit", function (event) {
+
+event.preventDefault();
+
+if (
+username.value.trim() === "" ||
+email.value.trim() === "" ||
+comments.value.trim() === ""
+) {
+alert("Please fill in all fields.");
+return;
+}
+
+const card = document.createElement("div");
+
+card.classList.add("feedback-card");
+
+card.innerHTML = `
+<h3>${username.value}</h3>
+<p>${email.value}</p>
+<p>${comments.value}</p>
+`;
+
+feedbackDisplay.appendChild(card);
+
+form.reset();
+
+charTotal.textContent = "0";
+
+});
+
+form.addEventListener("click", function (event) {
+
+event.stopPropagation();
+
+});
