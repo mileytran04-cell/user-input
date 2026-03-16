@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>User Feedback Form</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>User Feedback Form</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>User Feedback</h1>
+<h1>User Feedback Form</h1>
 
-  <script src="cp_1.js"></script>
+<form id="feedback-form">
+
+<label>Name</label>
+<input type="text" id="username">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Comments</label>
+<textarea id="comments" rows="4"></textarea>
+
+<div>
+Characters: <span id="char-total">0</span>
+</div>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script src="cp_1.js"></script>
+
 </body>
 </html>
